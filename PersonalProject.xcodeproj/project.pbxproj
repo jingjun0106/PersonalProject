@@ -15,6 +15,7 @@
 		94348FD421912891003003C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94348FD221912891003003C4 /* LaunchScreen.storyboard */; };
 		94348FDF21912891003003C4 /* PersonalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94348FDE21912891003003C4 /* PersonalProjectTests.swift */; };
 		94348FEA21912891003003C4 /* PersonalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94348FE921912891003003C4 /* PersonalProjectUITests.swift */; };
+		94348FFE21913EA0003003C4 /* KJNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94348FFD21913EA0003003C4 /* KJNetworkHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		94348FE521912891003003C4 /* PersonalProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonalProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94348FE921912891003003C4 /* PersonalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProjectUITests.swift; sourceTree = "<group>"; };
 		94348FEB21912891003003C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94348FFD21913EA0003003C4 /* KJNetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KJNetworkHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		94348FC821912891003003C4 /* PersonalProject */ = {
 			isa = PBXGroup;
 			children = (
+				94348FFC21913E73003003C4 /* Network */,
 				94348FC921912891003003C4 /* AppDelegate.swift */,
 				94348FCB21912891003003C4 /* ViewController.swift */,
 				94348FCD21912891003003C4 /* Main.storyboard */,
@@ -147,6 +150,14 @@
 				94348FEB21912891003003C4 /* Info.plist */,
 			);
 			path = PersonalProjectUITests;
+			sourceTree = "<group>";
+		};
+		94348FFC21913E73003003C4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				94348FFD21913EA0003003C4 /* KJNetworkHelper.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,11 +315,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PersonalProject/Pods-PersonalProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +340,7 @@
 			files = (
 				94348FCC21912891003003C4 /* ViewController.swift in Sources */,
 				94348FCA21912891003003C4 /* AppDelegate.swift in Sources */,
+				94348FFE21913EA0003003C4 /* KJNetworkHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
